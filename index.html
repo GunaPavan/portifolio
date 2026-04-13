@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gunaputra Nagendra Pavan Yedida | AI/ML Engineer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" id="customCursor">
+        <span class="cursor-robot">&#129302;</span>
+    </div>
+    <div class="cursor-trail" id="cursorTrail"></div>
+
+    <!-- Neural Network Canvas -->
+    <canvas id="neuralCanvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo"><img src="assets/profile.jpeg" alt="Pavan Yedida" class="nav-avatar"></a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact" class="nav-cta">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-grid"></div>
+        <div class="hero-glow"></div>
+        <div class="hero-content">
+            <div class="hero-badge">Available for Opportunities</div>
+            <h1 class="hero-title">
+                <span class="hero-greeting">Hi, I'm</span>
+                <span class="hero-name">Gunaputra Nagendra Pavan Yedida</span>
+            </h1>
+            <p class="hero-subtitle">
+                <span class="typed-text" id="typedText"></span><span class="cursor">|</span>
+            </p>
+            <p class="hero-description">
+                AI/ML Engineer &amp; Researcher with 3 years of combined experience spanning research
+                and industry, focused on building scalable, real-world intelligent systems. Co-Founder
+                of Discensys &mdash; an open learning collective making tech education accessible.
+            </p>
+            <div class="hero-actions">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-outline">Get in Touch</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number" data-target="6">0</span><span class="accent">+</span>
+                    <span class="stat-label">Publications</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="100">0</span><span class="accent">+</span>
+                    <span class="stat-label">Mentees Guided</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="10">0</span><span class="accent">+</span>
+                    <span class="stat-label">Projects Built</span>
+                </div>
+            </div>
+        </div>
+        <!-- Animated Robot -->
+        <div class="hero-robot-container" id="heroRobotContainer">
+            <div class="robot-body">
+                <div class="robot-antenna">
+                    <div class="antenna-ball"></div>
+                    <div class="antenna-stick"></div>
+                </div>
+                <div class="robot-head">
+                    <div class="robot-eye left"></div>
+                    <div class="robot-eye right"></div>
+                    <div class="robot-mouth"></div>
+                </div>
+                <div class="robot-neck"></div>
+                <div class="robot-torso">
+                    <div class="robot-screen">
+                        <span class="robot-screen-text" id="robotScreenText">&gt;_ AI</span>
+                    </div>
+                </div>
+                <div class="robot-arms">
+                    <div class="robot-arm left-arm"></div>
+                    <div class="robot-arm right-arm"></div>
+                </div>
+                <div class="robot-legs">
+                    <div class="robot-leg left-leg"></div>
+                    <div class="robot-leg right-leg"></div>
+                </div>
+            </div>
+            <div class="robot-shadow"></div>
+        </div>
+
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="section-number">01.</span> About Me
+            </h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>
+                        AI/ML Engineer &amp; Researcher with 3 years of combined experience spanning
+                        research and industry, focused on building scalable, real-world intelligent
+                        systems. Strong expertise in machine learning, deep learning, NLP, computer
+                        vision, and generative AI, with hands-on experience translating research
+                        ideas into production-grade solutions.
+                    </p>
+                    <p>
+                        Experienced in designing end-to-end AI pipelines from data curation and
+                        modeling to evaluation and deployment. Actively contributing to open-source
+                        AI initiatives, including work on low-resource language models and
+                        community-driven, socially impactful AI systems at <strong>Swecha</strong>.
+                    </p>
+                    <p>
+                        Co-Founded <strong>Discensys</strong>, a community-driven open learning
+                        collective making high-quality learning and skill development accessible. Also a
+                        technical blogger on <strong>Medium</strong> and active contributor to
+                        citizen-science at Zooniverse and the Smithsonian Institution.
+                    </p>
+                </div>
+                <div class="about-details">
+                    <div class="detail-card">
+                        <div class="detail-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                        </div>
+                        <h3>Education</h3>
+                        <p>B.Tech in AI & ML</p>
+                        <span class="detail-meta">CGPA: 8.96 | 2021-2025</span>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                        </div>
+                        <h3>Location</h3>
+                        <p>Hyderabad, India</p>
+                        <span class="detail-meta">Open to Remote</span>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                        </div>
+                        <h3>Experience</h3>
+                        <p>3+ Years</p>
+                        <span class="detail-meta">Research + Industry</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section section-dark" id="experience">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="section-number">02.</span> Experience
+            </h2>
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Co-Founder</h3>
+                                <p class="timeline-company">Discensys</p>
+                            </div>
+                            <span class="timeline-date">Mar 2026 &ndash; Present</span>
+                        </div>
+                        <ul class="timeline-details">
+                            <li>Co-founded Discensys, a community-driven open learning collective focused on making high-quality learning and skill development accessible to everyone</li>
+                            <li>Design and conduct structured weekend sessions based on community-selected topics across technology, creativity, personal growth, and emerging fields</li>
+                            <li>Develop and manage the weekly topic-voting model, session framework, and long-term growth strategy for building a scalable, collaborative learning platform</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span>Leadership</span><span>Education</span><span>Community</span><span>Growth Strategy</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Technical Blogger</h3>
+                                <p class="timeline-company">Medium</p>
+                            </div>
+                            <span class="timeline-date">Jan 2026 &ndash; Present</span>
+                        </div>
+                        <ul class="timeline-details">
+                            <li>Authoring technical blogs on AI and emerging technologies with a focus on real-world developments</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span>Technical Writing</span><span>AI</span><span>Medium</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Software Developer (Pro Bono)</h3>
+                                <p class="timeline-company">Swecha (Non-Profit)</p>
+                            </div>
+                            <span class="timeline-date">May 2025 &ndash; Present</span>
+                        </div>
+                        <ul class="timeline-details">
+                            <li>Co-leading engineering efforts to design and deploy resilient, open-source systems using Python, Docker, FastAPI, and GitLab CI/CD</li>
+                            <li>Working on a Telugu large language model (LLM) &mdash; dataset curation, preprocessing, and training/evaluation pipelines</li>
+                            <li>Mentored 100+ junior contributors on modular system design, version control, and collaborative open-source practices</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span>Python</span><span>Docker</span><span>FastAPI</span><span>GitLab CI/CD</span><span>LLMs</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>AI/ML Developer Intern</h3>
+                                <p class="timeline-company">MH Cognition</p>
+                            </div>
+                            <span class="timeline-date">Jan 2025 &ndash; May 2025</span>
+                        </div>
+                        <ul class="timeline-details">
+                            <li>Led a team of 7 to design and deploy scalable AI systems with real-time inference, boosting user engagement by 40%</li>
+                            <li>Built and trained ML/DL models achieving up to 99% accuracy on 100K+ samples</li>
+                            <li>Streamlined end-to-end workflows, improving reproducibility by 30%</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span>TensorFlow</span><span>PyTorch</span><span>scikit-learn</span><span>Docker</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Undergraduate Researcher</h3>
+                                <p class="timeline-company">Malla Reddy University</p>
+                            </div>
+                            <span class="timeline-date">Jan 2023 &ndash; May 2025</span>
+                        </div>
+                        <ul class="timeline-details">
+                            <li>Conducted 2+ years of AI/ML research in text classification, computer vision, and cognitive digital twins</li>
+                            <li>Co-authored publications and translated research into working prototypes</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span>Research</span><span>Deep Learning</span><span>Computer Vision</span><span>NLP</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Data Engineer Intern</h3>
+                                <p class="timeline-company">One Window Overseas Education Pvt. Ltd.</p>
+                            </div>
+                            <span class="timeline-date">Oct 2024 &ndash; Dec 2024</span>
+                        </div>
+                        <ul class="timeline-details">
+                            <li>Designed scalable data pipelines processing hundreds of thousands of records with 99.9% reliability</li>
+                            <li>Automated ETL workflows reducing manual handling by 70% and enabling 40% faster queries</li>
+                            <li>Aggregated data using Selenium and BeautifulSoup, enriching datasets by 60%</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span>ETL</span><span>Selenium</span><span>BeautifulSoup</span><span>Data Pipelines</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>AI Intern</h3>
+                                <p class="timeline-company">Coincent</p>
+                            </div>
+                            <span class="timeline-date">Oct 2022 &ndash; Dec 2022</span>
+                        </div>
+                        <ul class="timeline-details">
+                            <li>Acquired hands-on experience in machine learning and deep learning techniques through various projects</li>
+                            <li>Developed and tested models using MNIST and Fashion MNIST datasets, focusing on image classification and data analysis</li>
+                            <li>Gained proficiency in implementing and optimizing algorithms to enhance model performance and accuracy</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span>Machine Learning</span><span>Deep Learning</span><span>Image Classification</span><span>Python</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="section-number">03.</span> Projects
+            </h2>
+            <div class="projects-grid">
+                <a href="https://github.com/GunaPavan/DreamEngine" target="_blank" rel="noopener" class="project-card featured">
+                    <div class="project-card-inner">
+                        <div class="project-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a4 4 0 014 4c0 1.95-2 3-2 8h-4c0-5-2-6.05-2-8a4 4 0 014-4z"/><path d="M10 14h4"/><path d="M10 17h4"/><path d="M11 20h2"/></svg>
+                        </div>
+                        <h3>DreamEngine</h3>
+                        <p>A cognitively-inspired LLM agent simulating elements of consciousness &mdash; memory drift, hallucinated beliefs, recursive introspection, and dreaming &mdash; using multiple open-source LLMs and vector-based memory systems.</p>
+                        <div class="project-tags">
+                            <span>LLMs</span><span>Cognitive AI</span><span>Vector DB</span><span>Python</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://github.com/GunaPavan/qa-checker-agent" target="_blank" rel="noopener" class="project-card featured">
+                    <div class="project-card-inner">
+                        <div class="project-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+                        </div>
+                        <h3>QA Checker Agent</h3>
+                        <p>An intelligent agent for validating compliance reports and generating QA evaluation scores, automating quality assurance workflows.</p>
+                        <div class="project-tags">
+                            <span>Agentic AI</span><span>QA</span><span>Compliance</span><span>Python</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://github.com/GunaPavan/ai-multimodal-storyteller" target="_blank" rel="noopener" class="project-card featured">
+                    <div class="project-card-inner">
+                        <div class="project-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                        </div>
+                        <h3>AI Multimodal Storyteller</h3>
+                        <p>Open-source pipeline that generates visually rich and narrated stories from text prompts using LLMs, text-to-image generation, speech synthesis, and optional database storage.</p>
+                        <div class="project-tags">
+                            <span>LLMs</span><span>Text-to-Image</span><span>TTS</span><span>Multimodal</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://github.com/GunaPavan/ConvoFlow" target="_blank" rel="noopener" class="project-card featured">
+                    <div class="project-card-inner">
+                        <div class="project-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                        </div>
+                        <h3>ConvoFlow</h3>
+                        <p>AI-powered conversational assistant built with FastAPI, LangChain, and Streamlit, featuring persistent memory, sentiment analysis, TTS audio, and real-time webhook notifications.</p>
+                        <div class="project-tags">
+                            <span>FastAPI</span><span>LangChain</span><span>Streamlit</span><span>NLP</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://github.com/GunaPavan/EcoOrchestra" target="_blank" rel="noopener" class="project-card featured">
+                    <div class="project-card-inner">
+                        <div class="project-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+                        </div>
+                        <h3>EcoOrchestra</h3>
+                        <p>Generative AI music from real-time environmental data. Giving nature a voice through prompt-engineered MusicGen models and real-time signal-to-content transformation.</p>
+                        <div class="project-tags">
+                            <span>Generative AI</span><span>MusicGen</span><span>Real-time</span><span>Climate Data</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://github.com/GunaPavan/UrbanPulse" target="_blank" rel="noopener" class="project-card featured">
+                    <div class="project-card-inner">
+                        <div class="project-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+                        </div>
+                        <h3>UrbanPulse</h3>
+                        <p>Real-time Smart City IoT Dashboard aggregating open IoT data (weather, air quality, traffic) into a unified Urban Health Index.</p>
+                        <div class="project-tags">
+                            <span>IoT</span><span>Dashboard</span><span>Real-time</span><span>Python</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://github.com/GunaPavan/cryptwin-ai-rev" target="_blank" rel="noopener" class="project-card featured">
+                    <div class="project-card-inner">
+                        <div class="project-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
+                        </div>
+                        <h3>CrypTwin AI</h3>
+                        <p>Framework fusing AI-powered Cognitive Digital Twins with blockchain for real-time, transparent real estate valuation using Temporal Fusion Transformers and federated learning.</p>
+                        <div class="project-tags">
+                            <span>Digital Twins</span><span>Blockchain</span><span>TFT</span><span>Federated Learning</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://github.com/DarthAether/threat-identification-system" target="_blank" rel="noopener" class="project-card featured">
+                    <div class="project-card-inner">
+                        <div class="project-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        </div>
+                        <h3>Threat Identification System</h3>
+                        <p>Deep learning-based threat identification system integrating real-time camera technology for highly accurate detection of security threats.</p>
+                        <div class="project-tags">
+                            <span>Deep Learning</span><span>Computer Vision</span><span>Real-time</span><span>Security</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://github.com/GunaPavan/web-scraping-using-selenium" target="_blank" rel="noopener" class="project-card featured">
+                    <div class="project-card-inner">
+                        <div class="project-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                        </div>
+                        <h3>Web Scraping with Selenium</h3>
+                        <p>Automated web scraping toolkit built with Python and Selenium for extracting and processing structured data from web sources.</p>
+                        <div class="project-tags">
+                            <span>Selenium</span><span>Web Scraping</span><span>Automation</span><span>Python</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://github.com/GunaPavan/Text-classification-of-positive-and-unlabeled-dataset-using-SVM" target="_blank" rel="noopener" class="project-card featured">
+                    <div class="project-card-inner">
+                        <div class="project-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                        </div>
+                        <h3>PU Text Classification with SVM</h3>
+                        <p>Text classification from positive and unlabeled examples using Support Vector Machines, addressing semi-supervised learning challenges.</p>
+                        <div class="project-tags">
+                            <span>SVM</span><span>NLP</span><span>Semi-supervised</span><span>Python</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://github.com/GunaPavan/react-cards" target="_blank" rel="noopener" class="project-card featured">
+                    <div class="project-card-inner">
+                        <div class="project-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                        </div>
+                        <h3>React Cards</h3>
+                        <p>A React-based card component project demonstrating modern frontend development practices and reusable UI components.</p>
+                        <div class="project-tags">
+                            <span>React</span><span>JavaScript</span><span>Frontend</span><span>UI</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://github.com/GunaPavan/Sizzly-foodorderwebsite" target="_blank" rel="noopener" class="project-card featured">
+                    <div class="project-card-inner">
+                        <div class="project-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 2h18l-1 18H4L3 2z"/><path d="M8 2v4m8-4v4"/></svg>
+                        </div>
+                        <h3>Sizzly Food Order Website</h3>
+                        <p>A food ordering website built with HTML, CSS and JavaScript featuring an interactive menu, cart functionality, and responsive design.</p>
+                        <div class="project-tags">
+                            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Web Dev</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section class="section section-dark" id="research">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="section-number">04.</span> Research
+            </h2>
+            <div class="research-grid">
+                <div class="research-category">
+                    <h3 class="research-category-title">Current Research</h3>
+                    <div class="research-list">
+                        <a href="https://zenodo.org/records/17764242" target="_blank" rel="noopener" class="research-item">
+                            <div class="research-indicator current"></div>
+                            <div>
+                                <h4>Sheaf Neural Networks: Geometric Architectures for Graph-Structured Data</h4>
+                                <p class="research-meta">Zenodo (Preprint) &bull; Nov 2025</p>
+                            </div>
+                        </a>
+                        <a href="https://zenodo.org/records/17753943" target="_blank" rel="noopener" class="research-item">
+                            <div class="research-indicator current"></div>
+                            <div>
+                                <h4>Adaptive Skill Mixture Architecture: A Multi-Skill Framework for Enhanced Reinforcement Learning</h4>
+                                <p class="research-meta">Zenodo (Preprint) &bull; Nov 2025</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="research-category">
+                    <h3 class="research-category-title">Undergraduate Research</h3>
+                    <div class="research-list">
+                        <a href="https://zenodo.org/records/17217841" target="_blank" rel="noopener" class="research-item">
+                            <div class="research-indicator"></div>
+                            <div>
+                                <h4>AI-Powered Cognitive Digital Twin for Blockchain-Driven Real Estate Valuation</h4>
+                                <p class="research-meta">Zenodo &bull; 2025</p>
+                            </div>
+                        </a>
+                        <a href="https://zenodo.org/records/17217619" target="_blank" rel="noopener" class="research-item">
+                            <div class="research-indicator"></div>
+                            <div>
+                                <h4>Black and White Image Colorization with Deep Learning</h4>
+                                <p class="research-meta">Zenodo &bull; 2024</p>
+                            </div>
+                        </a>
+                        <a href="https://zenodo.org/records/17217575" target="_blank" rel="noopener" class="research-item">
+                            <div class="research-indicator"></div>
+                            <div>
+                                <h4>Text Classification from Positive and Unlabeled Examples Using SVM</h4>
+                                <p class="research-meta">Zenodo &bull; Dec 2023</p>
+                            </div>
+                        </a>
+                        <a href="https://zenodo.org/records/17217468" target="_blank" rel="noopener" class="research-item">
+                            <div class="research-indicator"></div>
+                            <div>
+                                <h4>Simple Multi-Vendor Ecommerce Website</h4>
+                                <p class="research-meta">Zenodo &bull; 2023</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section" id="skills">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="section-number">05.</span> Skills & Certifications
+            </h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="skill-category-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                    </div>
+                    <h3>Programming</h3>
+                    <div class="skill-tags">
+                        <span>Python</span>
+                        <span>Shell Scripting</span>
+                        <span>Bash/Linux</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v6m0 6v6m11-7h-6m-6 0H1m15.36-5.64l-4.24 4.24m-2.24-2.24L5.64 5.64m12.72 12.72l-4.24-4.24m-2.24 2.24l-4.24 4.24"/></svg>
+                    </div>
+                    <h3>AI & ML</h3>
+                    <div class="skill-tags">
+                        <span>Machine Learning</span>
+                        <span>Deep Learning</span>
+                        <span>NLP</span>
+                        <span>Computer Vision</span>
+                        <span>Generative AI</span>
+                        <span>Agentic AI</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
+                    </div>
+                    <h3>Frameworks</h3>
+                    <div class="skill-tags">
+                        <span>PyTorch</span>
+                        <span>TensorFlow</span>
+                        <span>scikit-learn</span>
+                        <span>FastAPI</span>
+                        <span>Django</span>
+                        <span>LangChain</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+                    </div>
+                    <h3>MLOps & DevOps</h3>
+                    <div class="skill-tags">
+                        <span>Docker</span>
+                        <span>Git</span>
+                        <span>AWS</span>
+                        <span>Kubernetes</span>
+                        <span>CI/CD</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+                    </div>
+                    <h3>Data Engineering</h3>
+                    <div class="skill-tags">
+                        <span>SQL</span>
+                        <span>MySQL</span>
+                        <span>MongoDB</span>
+                        <span>FAISS</span>
+                        <span>Chroma</span>
+                        <span>Airflow</span>
+                        <span>Kafka</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                    </div>
+                    <h3>Math Foundations</h3>
+                    <div class="skill-tags">
+                        <span>Linear Algebra</span>
+                        <span>Calculus</span>
+                        <span>Probability</span>
+                        <span>Statistics</span>
+                        <span>Optimization</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certifications -->
+            <div class="certifications">
+                <h3 class="subsection-title">Certifications</h3>
+                <div class="cert-grid">
+                    <div class="cert-card">
+                        <div class="cert-badge">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15l-2 5 2-1 2 1-2-5z"/><circle cx="12" cy="8" r="6"/></svg>
+                        </div>
+                        <div>
+                            <h4>Microsoft Certified: Fabric Analytics Engineer Associate</h4>
+                            <p>Microsoft &bull; Jun 2025</p>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-badge">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15l-2 5 2-1 2 1-2-5z"/><circle cx="12" cy="8" r="6"/></svg>
+                        </div>
+                        <div>
+                            <h4>Intermediate Machine Learning</h4>
+                            <p>Kaggle &bull; Dec 2025</p>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-badge">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15l-2 5 2-1 2 1-2-5z"/><circle cx="12" cy="8" r="6"/></svg>
+                        </div>
+                        <div>
+                            <h4>Intro to Machine Learning</h4>
+                            <p>Kaggle &bull; Dec 2025</p>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-badge">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15l-2 5 2-1 2 1-2-5z"/><circle cx="12" cy="8" r="6"/></svg>
+                        </div>
+                        <div>
+                            <h4>Deep Learning</h4>
+                            <p>(NPTEL) IIT Ropar &bull; Apr 2024</p>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-badge">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15l-2 5 2-1 2 1-2-5z"/><circle cx="12" cy="8" r="6"/></svg>
+                        </div>
+                        <div>
+                            <h4>Programming for Everybody (Getting Started with Python)</h4>
+                            <p>University of Michigan &bull; Mar 2024</p>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-badge">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15l-2 5 2-1 2 1-2-5z"/><circle cx="12" cy="8" r="6"/></svg>
+                        </div>
+                        <div>
+                            <h4>Data Analysis with Python</h4>
+                            <p>IBM &bull; May 2023</p>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-badge">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15l-2 5 2-1 2 1-2-5z"/><circle cx="12" cy="8" r="6"/></svg>
+                        </div>
+                        <div>
+                            <h4>Excel Skills for Business: Essentials</h4>
+                            <p>Macquarie University &bull; May 2023</p>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-badge">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15l-2 5 2-1 2 1-2-5z"/><circle cx="12" cy="8" r="6"/></svg>
+                        </div>
+                        <div>
+                            <h4>Java Programming: Arrays, Lists, and Structured Data</h4>
+                            <p>Duke University &bull; May 2023</p>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-badge">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15l-2 5 2-1 2 1-2-5z"/><circle cx="12" cy="8" r="6"/></svg>
+                        </div>
+                        <div>
+                            <h4>Technical Support Fundamentals</h4>
+                            <p>Google &bull; May 2023</p>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-badge">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15l-2 5 2-1 2 1-2-5z"/><circle cx="12" cy="8" r="6"/></svg>
+                        </div>
+                        <div>
+                            <h4>Artificial Intelligence on Microsoft Azure</h4>
+                            <p>Microsoft &bull; Nov 2022</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Achievements -->
+            <div class="achievements">
+                <h3 class="subsection-title">Achievements</h3>
+                <div class="achievements-list">
+                    <div class="achievement-item">
+                        <span class="achievement-icon">&#127942;</span>
+                        <p>Global rank <strong>619</strong> out of ~250,000 participants on ProjectEuler+ (HackerRank)</p>
+                    </div>
+                    <div class="achievement-item">
+                        <span class="achievement-icon">&#127941;</span>
+                        <p>Top <strong>5,000</strong> out of ~79,000 in the Ignite Edition Challenge: Microsoft Fabric</p>
+                    </div>
+                    <div class="achievement-item">
+                        <span class="achievement-icon">&#128187;</span>
+                        <p>Participated in <strong>BNB Hack Kerala 2025</strong>, national hackathon powered by BNB Chain</p>
+                    </div>
+                    <div class="achievement-item">
+                        <span class="achievement-icon">&#127758;</span>
+                        <p>Participated in the <strong>Global AI Summit</strong> organized by the Government of Telangana, 2024</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Volunteering Section -->
+    <section class="section section-dark" id="volunteering">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="section-number">06.</span> Volunteering
+            </h2>
+            <div class="volunteer-grid">
+                <div class="volunteer-card">
+                    <div class="volunteer-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+                    </div>
+                    <h3>Zooniverse</h3>
+                    <p class="volunteer-role">Citizen Science Volunteer</p>
+                    <span class="volunteer-date">Jan 2026 &ndash; Present</span>
+                    <p>Contributing to citizen-science research supporting the NSF&ndash;DOE Vera C. Rubin Observatory by validating astronomical alerts used to refine Deep CNN classifiers.</p>
+                </div>
+                <div class="volunteer-card">
+                    <div class="volunteer-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+                    </div>
+                    <h3>Smithsonian Institution</h3>
+                    <p class="volunteer-role">Smithsonian Digital Volunteer</p>
+                    <span class="volunteer-date">Jan 2026 &ndash; Present</span>
+                    <p>Transcribing handwritten archival materials into machine-readable text to improve accessibility and usability of cultural and historical collections.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="section-number">07.</span> Get In Touch
+            </h2>
+            <div class="contact-content">
+                <p class="contact-description">
+                    I'm currently open to new opportunities and collaborations. Whether you have
+                    a question, a project idea, or just want to connect &mdash; feel free to reach out!
+                </p>
+                <div class="contact-links">
+                    <a href="mailto:gnp.yedida@gmail.com" class="contact-card">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        <div>
+                            <h4>Email</h4>
+                            <p>gnp.yedida@gmail.com</p>
+                        </div>
+                    </a>
+                    <a href="https://www.linkedin.com/in/gunapavan/" class="contact-card" target="_blank" rel="noopener">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                        <div>
+                            <h4>LinkedIn</h4>
+                            <p>Connect with me</p>
+                        </div>
+                    </a>
+                    <a href="https://github.com/GunaPavan" class="contact-card" target="_blank" rel="noopener">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+                        <div>
+                            <h4>GitHub</h4>
+                            <p>View my code</p>
+                        </div>
+                    </a>
+                    <a href="https://orcid.org/0009-0009-8044-3998" class="contact-card" target="_blank" rel="noopener">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v8m-2-6h4"/></svg>
+                        <div>
+                            <h4>ORCID</h4>
+                            <p>0009-0009-8044-3998</p>
+                        </div>
+                    </a>
+                    <a href="tel:+916302058502" class="contact-card">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+91 6302058502</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>Designed & Built by <strong>Gunaputra Nagendra Pavan Yedida</strong></p>
+            <p class="footer-sub">AI/ML Engineer &bull; Researcher &bull; Co-Founder @ Discensys &bull; Open-Source Contributor</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
